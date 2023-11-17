@@ -1,0 +1,80 @@
+<!--Sisältää sivun rakenteen, 
+lomakkeen tehtävien lisäämiseen 
+sekä taulukon tehtävien näyttämiseen.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tehtävät 25 - 28</title>
+<link rel="stylesheet" type="text/css" href="VK7_TH25-28.css">
+
+<style>
+
+</style>
+
+</head>
+<body>
+
+<h1>Tehtävälista</h1>
+<p></p>
+<p></p>
+<p></p>
+<!--LUODAAN TEHTÄVÄN LUONTI-->
+
+<section class="grid-container">
+<h2>Lisää Tehtävä</h2>
+
+    <div class="input-container">
+        <label for="TehtävänNimi">Tehtävänimi</label>
+        <input type="text" id="Tehtävänimi">
+    </div>
+
+    <div class="input-container">
+        <label for="Prioriteetti">Prioriteetti</label>
+            <select name="Prioriteetti" id="Prioriteetti">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+    </div>
+
+    <div>
+        <label for="tavoitepvm">Tavoitepvm:</label>
+        <input type="date" placeholder="dd/mm/yyyy" id="tavoitepvm" name="tavoitepvm">
+    </div>
+
+    <button id="lisaaTehtava">Lisää tehtävä</button>
+
+</section>
+
+
+
+<p></p>
+<p></p>
+<p></p>
+
+<!--LUODAAN TEHTÄVÄLISTAN TAULUKKO-->
+
+<section>
+    <table id="tehtavalista">
+        <tr>
+            <th onclick="lajitteleTehtavat('id')" class="tooltip">ID
+                <span class="tooltiptext">Lajittele id.n mukaan</span></th>
+            <th onclick="lajitteleTehtavat('Tehtävänimi') "class="tooltip">Tehtävän nimi
+                <span class="tooltiptext">Lajittele nimen mukaan</span></th>
+            <th onclick="lajitteleTehtavat('Prioriteetti')" class="tooltip">Prioriteetti
+                <span class="tooltiptext">Lajittele Prioriteetin mukaan</span></th>
+            <th onclick="lajitteleTehtavat('tavoitepvm')" class="tooltip">tavoitepvm
+                <span class="tooltiptext">Lajittele päivän mukaan</span></th>
+            <th >Tila</th>
+        </tr>
+    </table>
+</section>
+
+
+<script src="VK7_TH25-28.js"></script>
+
+</body>
+</html>

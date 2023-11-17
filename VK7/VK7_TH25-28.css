@@ -1,0 +1,79 @@
+ 
+/*Määrittelee sivun ulkoasun 
+/* KOITIN ASETTELUSSA ETTÄ ASIAT ASETUISI
+ SAMALLE TAVELLE SYMMETSISESTI, NÄTISTI
+ ITSE OLEN OK TYYTYVÄINEN ETTÄ SAIN HOOVER. OMINAISUUDET TOIMIMAAN */
+
+ 
+/* Basic styles for the grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 50%; 
+    margin: 2rem 0; 
+    align-self: center; /* Keskitä pystysuunnassa */
+}
+
+/* Style for the input and label containers */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightcoral;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    position: fixed; /* Kiinnitä tooltip-sisältö sivun yläreunaan */
+    z-index: 1;
+    
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* Taustaväri koko sivulle */
+body {
+    background-color: linen;
+}
+
+
+/* Taulukon solutyyli */
+th, td {
+    padding: 8px;
+    border: 2px solid #ddd;
+    text-align: left;
+}
+
+/* Taulukon otsikoiden tyyli */
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center; /* Aseta otsikot keskelle */
+    padding: 8px;
+}
+
+/* Taustaväri kursorin ollessa solun päällä */
+tr:hover {
+    background-color: #ddd;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* Yliviivattu teksti valmiille tehtäville */
+tr.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
